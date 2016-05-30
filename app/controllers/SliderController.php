@@ -26,7 +26,7 @@ class SliderController extends BaseController {
    $slider->heading=Input::get("heading");
  	 $slider->content=Input::get("content");
  	 $slider->file=$filename;
- 	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+ 	 Image::make(Input::file('file'))->resize(1920, 763)->save(base_path().'/app/storage/uploaded/'.$filename);
  	 $slider->save();
 
     // Use url with redirect not the view file
@@ -58,7 +58,7 @@ class SliderController extends BaseController {
  	 $filename=Input::file("file")->getClientOriginalName();
     $heading=Input::get("heading");
  	 $content=Input::get("content");
- 	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+ 	 Image::make(Input::file('file'))->resize(1920, 763)->save(base_path().'/app/storage/uploaded/'.$filename);
  	 Slider::where('id', '=', $id)
              ->update(array('heading' => $heading,'content' => $content,'file' => $filename));
 

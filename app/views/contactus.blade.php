@@ -1,5 +1,18 @@
 @extends('layout')
 @section('content')
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(28.2026,83.985),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("contact-google-map"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 <!-- ======= Banner ======= -->
 		<section class="p0 container-fluid banner about_banner">
 			<div class="about_banner_opacity">
@@ -58,5 +71,4 @@
 			<div class="google-map" id="contact-google-map" data-map-lat="40.650002" data-map-lng="-73.949997" data-icon-path="images/map-marker.png" data-map-title="Awesome Place" data-map-zoom="12"></div>
 		</div>
 <!-- =============== /google map ============= -->
-
 @stop

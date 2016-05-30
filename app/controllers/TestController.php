@@ -27,7 +27,7 @@ public function handleTest(){
   $test->content1=Input::get("contentup");
 	$test->content2=Input::get("contentdown");
 	$test->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   $test->save();
 
   // Use url with redirect not the view file
@@ -60,7 +60,7 @@ public function editTestData($id){
 	$title=Input::get("title");
   $content1=Input::get("contentup");
 	$content2=Input::get("contentdown");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   Test::where('id', '=', $id)
             ->update(array('heading' => $heading,'title'=>$title,'content1'=>$content1,'content2' => $content2,'file' => $filename));
 

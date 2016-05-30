@@ -82,11 +82,6 @@
 								</div>
 							</li>
 							<li class="arrow_down"><a href="{{url('service')}}">Services</a>
-								<div class="sub-menu">
-									<ul>
-										<li><a href="{{url('service2')}}">Service Two</a></li>
-									</ul>
-								</div>
 							</li>
 							<li class="arrow_down" ><a href="{{url('studyabroad')}}">Study Abroad</a>
 							</li>

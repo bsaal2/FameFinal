@@ -25,61 +25,15 @@
 						<div class="tab_details">
 						    <!-- Tab panes -->
 						    <div class="tab-content right_info">
-
-									<div class="tab-pane fade row" id="financial">
+                               @foreach($service as $service)
+								<div class="tab-pane fade row" id="{{$service->id}}">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="assets/images/service/10.jpg" alt="image">
-						      	<h2>Financial planning</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+						      	<h2>{{$service->heading}}</h2>
+						      	<p>{{$service->content}}</p>
 						      </div>
-						      <div class="tab-pane fade in row active" id="investment">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="assets/images/service/10.jpg" alt="image">
-						      	<h2>Investment In Bonds</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
-
-						      <div class="tab-pane fade row" id="retairing">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
-						      	<h2>Retairing planning</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
-
-						      <div class="tab-pane fade row" id="texes">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
-						      	<h2>Texes Advisory</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
-
-									<div class="tab-pane fade row" id="stocks">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
-						      	<h2>Stocks market Training</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
-
-						      <div class="tab-pane fade row" id="mutual">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
-						      	<h2>Mutual funds</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
-
-						      <div class="tab-pane fade row" id="company">
-						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
-						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
-						      	<h2>Company growth analysis</h2>
-						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-						      </div>
+                             @endforeach
+						      
 
 						    </div>
 						</div> <!-- End tab_details -->
@@ -90,9 +44,9 @@
 					  <!-- Nav tabs -->
 
 						<ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
-              @foreach($heading as $heading)
-							<li><a href="#{{str_limit($heading->heading,$limit=5)}}" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{$heading->heading}}</a></li>
-              @endforeach
+                       @foreach($heading as $heading) 
+                        <li class="active"><a href="#{{$heading->id}}" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{$heading->heading}}</a></li>
+                        @endforeach
 						</ul>
 
 					  <div class="advisor_side"> <!-- Advisor profile & Download option -->

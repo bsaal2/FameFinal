@@ -26,7 +26,7 @@ public function handleImage(){
   $image->caption=Input::get("caption");
   $image->album=Input::get("album");
 	$image->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   $image->save();
 
   // Use url with redirect not the view file
@@ -58,7 +58,7 @@ public function editImageData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $caption=Input::get("caption");
 	$album=Input::get("album");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   Image::where('id', '=', $id)
             ->update(array('caption' => $caption,'album'=>$album,'file' => $filename));
 

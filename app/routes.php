@@ -28,6 +28,7 @@ Route::get("/study-table",function(){
 	return "Table created";
 });
 */
+
 //============Route for login ==============
 Route::get('/check',"HomeController@showC");
 

@@ -34,7 +34,7 @@ public function handleAbroad(){
   $abroad->content1=Input::get("content1");
 	$abroad->content2=Input::get("content2");
 	$abroad->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   $abroad->save();
 
   // Use url with redirect not the view file
@@ -67,7 +67,7 @@ public function editAbroadData($id){
 	$title=Input::get("title");
   $content1=Input::get("content1");
 	$content2=Input::get("content2");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(143, 163)->save(base_path().'/app/storage/uploaded/'.$filename);
   Country::where('id', '=', $id)
             ->update(array('heading' => $heading,'title'=>$title,'content1'=>$content1,'content2' => $content2,'file' => $filename));
 

@@ -32,7 +32,7 @@ public function handleAdvisor(){
 	$advisor->twitterlink=Input::get("twitter");
 	$advisor->googlepluslink=Input::get("googleplus");
 	$advisor->linkedinlink=Input::get("linkedin");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+   Image::make(Input::file('file'))->resize(270, 273)->save(base_path().'/app/storage/uploaded/'.$filename);
   $advisor->save();
 
   // Use url with redirect not the view file
@@ -71,7 +71,7 @@ public function editAdvisorData($id){
 	$twitterlink=Input::get("twitter");
 	$googlepluslink=Input::get("googleplus");
 	$linkedinlink=Input::get("linkedin");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+   Image::make(Input::file('file'))->resize(270, 273)->save(base_path().'/app/storage/uploaded/'.$filename);
   Advisor::where('id', '=', $id)
             ->update(array('name' => $name,'work' => $work,'content' => $content,'overview' => $overview,'phone'=>$phone,'email'=>$email,'facebooklink' => $facebooklink,
 						'twitterlink' => $twitterlink,'googlepluslink' => $googlepluslink,'linkedinlink' => $linkedinlink,'file' => $filename));

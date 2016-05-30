@@ -28,7 +28,7 @@ public function handleDepartment(){
   $depart->email=Input::get("email");
   $depart->department=Input::get("department");
 	$depart->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(120, 132)->save(base_path().'/app/storage/uploaded/'.$filename);
   $depart->save();
 
   // Use url with redirect not the view file
@@ -62,7 +62,7 @@ public function editDepartmentData($id){
   $phoneno=Input::get("phoneno");
   $email=Input::get("email");
   $department=Input::get("department");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(120, 132)->save(base_path().'/app/storage/uploaded/'.$filename);
   Department::where('id', '=', $id)
             ->update(array('name' => $name,'college'=>$college,'phoneno'=>$phoneno,'email'=>$email,'department'=>$department,'file' => $filename));
 

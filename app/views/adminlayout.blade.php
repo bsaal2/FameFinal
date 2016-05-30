@@ -40,9 +40,10 @@
     @include('adminsidenav')
 
     @yield('admincontent')
+    
     </div>
 
-
+    
     <!-- jQuery -->
     <script src="{{URL::asset('adminassets/js/jquery.js')}}"></script>
 

@@ -29,7 +29,7 @@ class UserController extends BaseController {
     $user->title=Input::get("title");
     $user->content=Input::get("content");
     $user->file=Input::file('file')->getClientOriginalName();
-    Input::file('file')->move(base_path().'/app/storage/uploaded',$name);
+    Image::make(Input::file('file'))->resize(130, 130)->save(base_path().'/app/storage/uploaded/'.$filename);
     $user->save();
 
     return Redirect::to('admintestimonial')->with('success','Submitted Successfully');
@@ -44,7 +44,7 @@ class UserController extends BaseController {
     $filename=User::find($id);
     $file=$filename->file;
 
-    Input::file('file')->move(base_path().'/app/storage/uploaded',$name);
+    Image::make(Input::file('file'))->resize(130, 130)->save(base_path().'/app/storage/uploaded/'.$filename);
     User::where('id', '=', $id)
              ->update(array('name' => $name,'position' => $position,'title' => $title,'content' => $content,'file' => $name));
     return Redirect::to("admintestimonialview");

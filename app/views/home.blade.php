@@ -46,7 +46,7 @@
 				        data-transform_in="o:0"
 				        data-transform_out="o:0"
 				        data-start="1400">
-						<a class="banner-button" href="">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
+						<a class="banner-button" href="{{url('contactus')}}">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
 				    </div>
 					<div class="tp-caption sfr tp-resizeme "
 				        data-x="left" data-hoffset="580"
@@ -56,7 +56,7 @@
 				        data-transform_in="o:0"
 				        data-transform_out="o:0"
 				        data-start="1700">
-						<a class="banner-button blue-bg" href="">View More <i class="fa fa-arrow-circle-right"></i></a>
+						<a class="banner-button blue-bg" href="{{url('gallery')}}">View More <i class="fa fa-arrow-circle-right"></i></a>
 				    </div>
 				</li>
        @endforeach
@@ -82,19 +82,23 @@
             @foreach($service1 as $service1)
 						<div class="welcome_item">
 							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service1->file}}" alt="images">
+							<a href="{{url('service')}}">
 							<div class="welcome_info">
 								<h3>{{$service1->heading}}</h3>
 								<p>{{$service1->content}}</p>
 							</div>
+							</a>
 						</div>
 						@endforeach
 						@foreach($service2 as $service2)
 						<div class="welcome_item welcome_item_bottom">
 							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service2->file}}" alt="images">
+							<a href="{{url('service')}}">
 							<div class="welcome_info">
 								<h3>{{$service2->heading}}</h3>
 								<p>{{$service2->content}}</p>
 							</div>
+							</a>
 						</div>
 						@endforeach
 					</div>
@@ -103,19 +107,23 @@
             @foreach($service3 as $service3)
 						<div class="welcome_item">
 							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service3->file}}" alt="images">
+							<a href="{{url('service')}}">
 							<div class="welcome_info">
 								<h3>{{$service3->heading}}</h3>
 								<p>{{$service3->content}}</p>
 							</div>
+							</a>
 						</div>
 						@endforeach
 						@foreach($service4 as $service4)
 						<div class="welcome_item welcome_item_bottom">
 							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service4->file}}" alt="images">
+							<a href="{{url('service')}}">
 							<div class="welcome_info">
 								<h3>{{$service4->heading}}</h3>
 								<p>{{$service4->content}}</p>
 							</div>
+							</a>
 						</div>
             @endforeach
 					</div>

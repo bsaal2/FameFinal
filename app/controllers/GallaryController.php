@@ -23,7 +23,7 @@ public function handleGallary(){
   $filename=Input::file("file")->getClientOriginalName();
   $gallary->name=Input::get("name");
   $gallary->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(548, 260)->save(base_path().'/app/storage/uploaded/'.$filename);
   $gallary->save();
 
   // Use url with redirect not the view file
@@ -53,7 +53,7 @@ public function editGallary($id){
 public function editGallaryData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $name=Input::get("name");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(548, 260)->save(base_path().'/app/storage/uploaded/'.$filename);
   Gallary::where('id', '=', $id)
             ->update(array('name' => $name,'file' => $filename));
 

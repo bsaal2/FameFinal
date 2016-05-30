@@ -63,7 +63,7 @@ class HomeController extends BaseController {
 		public function showService2()
 		{
 			$service=Service::orderBy('created_at','desc')->get();
-			$serviceHeading=Service::orderBy('created_at','desc')->get(array('heading'));
+			$serviceHeading=Service::orderBy('created_at','desc')->get(array('id','heading'));
 			return View::make('service2')->with(['heading'=>$serviceHeading,'service'=>$service]);
 		}
 

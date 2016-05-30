@@ -24,7 +24,7 @@ public function handleAbout(){
   $about->history=Input::get("history");
   $about->mission=Input::get("mission");
   $about->file=$filename;
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(470, 167)->save(base_path().'/app/storage/uploaded/'.$filename);
   $about->save();
 
   // Use url with redirect not the view file
@@ -55,7 +55,7 @@ public function editAboutData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $history=Input::get("history");
   $mission=Input::get("mission");
-  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
+  Image::make(Input::file('file'))->resize(470, 167)->save(base_path().'/app/storage/uploaded/'.$filename);
   About::where('id', '=', $id)
             ->update(array('history' => $history,'mission' => $mission,'file' => $filename));
 
