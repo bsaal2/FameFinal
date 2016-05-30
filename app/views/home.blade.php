@@ -7,7 +7,7 @@
 			<ul>
         @foreach($slider as $slider)
 				<li data-transition="fade">
-					<img src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$slider->file}}"  alt="{{$slider->file}}">
+					<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$slider->file}}"  alt="{{$slider->file}}">
 					<div class="tp-caption sfb tp-resizeme banner-h1"
 				        data-x="left" data-hoffset="380"
 				        data-y="top" data-voffset="290"
@@ -79,37 +79,47 @@
 				</div> <!-- End Row -->
 				<div class="row welcome welcome_details">
 					<div class="col-lg-6 col-md-12">
+            @foreach($service1 as $service1)
 						<div class="welcome_item">
-							<img src="assets/images/wods1.jpg" alt="images">
+							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service1->file}}" alt="images">
 							<div class="welcome_info">
-								<h3>Advance Science Course</h3>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+								<h3>{{$service1->heading}}</h3>
+								<p>{{$service1->content}}</p>
 							</div>
 						</div>
+						@endforeach
+						@foreach($service2 as $service2)
 						<div class="welcome_item welcome_item_bottom">
-							<img src="assets/images/wods2.jpg" alt="images">
+							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service2->file}}" alt="images">
 							<div class="welcome_info">
-								<h3>A-Level Bridge Course</h3>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+								<h3>{{$service2->heading}}</h3>
+								<p>{{$service2->content}}</p>
 							</div>
 						</div>
+						@endforeach
 					</div>
+
 					<div class="col-lg-6 col-md-12 bottom_row">
+            @foreach($service3 as $service3)
 						<div class="welcome_item">
-							<img src="assets/images/wods3.jpg" alt="images">
+							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service3->file}}" alt="images">
 							<div class="welcome_info">
-								<h3>Staff Nurse Preparation</h3>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+								<h3>{{$service3->heading}}</h3>
+								<p>{{$service3->content}}</p>
 							</div>
 						</div>
+						@endforeach
+						@foreach($service4 as $service4)
 						<div class="welcome_item welcome_item_bottom">
-							<img src="assets/images/wods4.jpg" alt="images">
+							<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service4->file}}" alt="images">
 							<div class="welcome_info">
-								<h3>Advanced Management Course</h3>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+								<h3>{{$service4->heading}}</h3>
+								<p>{{$service4->content}}</p>
 							</div>
 						</div>
+            @endforeach
 					</div>
+
 				</div> <!-- End Row -->
 			</div> <!-- End container -->
 		</section> <!-- End welcome_sec -->
@@ -146,28 +156,20 @@
 				<div class="row">
 					<div  class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonial_container">
 						<div class="sec-title">
-							<h2>Testimonials</h2>
+							<h2>Our Team</h2>
 						</div>
 						<div id="owl">
 
               @foreach($testimonial as $testimonial)
 							<div>
 								<div class="testimonial">
-									<img class="round_img" src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$testimonial->file}}" alt="images">
-									<div class="float_right client_info">
+									<img class="round_img" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$testimonial->file}}" alt="images">
+									<div class="float_right client_info ourteam">
 										<p>{{$testimonial->title}}</p>
 										<span>{{$testimonial->name}} ({{$testimonial->position}})</span>
-										<ul>
-											<li><a href=""></a></li>
-											<li><a href=""></a></li>
-											<li><a href=""></a></li>
-											<li><a href=""></a></li>
-											<li><a href=""></a></li>
-										</ul>
 									</div>
 								</div>
 								<p class="john_speach">{{str_limit($testimonial->content,$limit=300)}}</p>
-								<img src="assets/images/sign.jpg" alt="images">
 							</div>
               @endforeach
 
@@ -240,16 +242,16 @@
 					<h2>We are running abroad study programs. </h2>
 					<p>We have brought the abroad study program for following country with following preparation classes.</p>
 					<ul class="p0">
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">Australia</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">USA</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">Bangladesh</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">India</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">Australia</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">USA</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">Bangladesh</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">India</a></li>
 					</ul>
 					<ul class="list_two">
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">IELTS</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">GRE</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">GMAT</a></li>
-						<li><i class="fa fa-arrow-circle-right"></i><a href="">TOEFL</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">IELTS</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">GRE</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">GMAT</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="{{url('studyabroad')}}">TOEFL</a></li>
 					</ul>
 				</div> <!-- End container -->
 			</div>
@@ -277,12 +279,12 @@
 
 						@foreach($partnerContent as $partnerContent)
 						<p>{{$partnerContent->content}}</p>
-            @endforeach
+                      @endforeach
 
 						<ul>
-             @foreach($partnerImage as $partnerImage)
-							<li><a href=""><img src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$partnerImage->file}}" alt="{{$partnerImage->file}}"></a></li>
-             @endforeach
+                      @foreach($partnerImage as $partnerImage)
+							<li><a href=""><img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$partnerImage->file}}" alt="{{$partnerImage->file}}"></a></li>
+                      @endforeach
 						</ul>
 					</div> <!-- End our_partner -->
 					<div class="get_touch col-lg-6 col-md-5 col-sm-12 col-xs-12">

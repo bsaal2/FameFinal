@@ -8,7 +8,7 @@
 					<div class="banner_info_about">
 						<h1>Advisors</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{{url('/home')}}">Home</a></li>
 							<li><i class="fa fa-angle-right"></i></li>
 							<li>Advisors</li>
 						</ul>
@@ -34,7 +34,7 @@
 
 						@foreach($advisor as $advisor)
 						<div class="col-lg-3 col-md-3 col-sm-6 profile">
-							<img class="img-responsive" src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$advisor->file}}" alt="images">
+							<img class="img-responsive" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$advisor->file}}" alt="images">
 							<div class="caption_bg">
 								<a href="{{url('singleadvisor/'.$advisor->id)}}">
 									<h4>{{$advisor->name}}</h4>
@@ -76,8 +76,8 @@
 <!-- ============ free consultation ================ -->
 		<section class="container-fluid consultation">
 			<div class="container">
-				<p>If you have any querry for related investment  ... We are available</p>
-				<a href="">Contact us <i class="fa fa-arrow-circle-right"></i></a>
+				<p>If you have any querry for related information  ... We are available</p>
+				<a href="{{url('contactus')}}">Contact us <i class="fa fa-arrow-circle-right"></i></a>
 			</div>
 		</section> <!-- End consultation -->
 <!-- ============ /free consultation ================ -->

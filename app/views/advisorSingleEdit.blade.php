@@ -3,7 +3,7 @@
 
 <div id="page-wrapper">
 
-            <div class="container-fluid" style="height: 1000px;">
+            <div class="container-fluid">
              <div class="row">
 
                <div class="col-lg-5">
@@ -29,15 +29,15 @@
                    </div>
                    <div class="form-group">
                     <label>Content</label>
-                    <textarea class="form-control" name="content" rows="3" required>{{$advisor->content}}</textarea>
+                    <textarea class="form-control" name="content" rows="3">{{$advisor->content}}</textarea>
                    </div>
                    <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="number" class="form-control" name="phone" value="{{$advisor->phone}}" placeholder="Enter Phone Number" required>
+                    <input type="number" class="form-control" name="phone" value="{{$advisor->phone}}" placeholder="Enter Phone Number">
                    </div>
                    <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" name="email" value="{{$advisor->email}}" placeholder="Enter Email Address" required>
+                    <input type="email" class="form-control" name="email" value="{{$advisor->email}}" placeholder="Enter Email Address">
                    </div>
                    <div class="form-group">
                     <label>Facebook Link</label>
@@ -60,20 +60,11 @@
 
                </div>
 
-               <div class="col-lg-3 col-lg-offset-2">
-                 <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Menu</h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="alert alert-warning" role="alert">
-                      <a href="{{url('/adminadvisor')}}" class="alert-link">Create</a>
-                    </div>
-                    <div class="alert alert-warning" role="alert">
-                      <a href="{{url('/adminadvisorview')}}" class="alert-link">View</a>
-                    </div>
-                  </div>
-                </div>
+               <div class="col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2">
+                 <ul class="nav nav-pills nav-stacked sidebar">
+                   <li role="presentation" class="active"><a href="{{url('adminadvisor')}}"><i class="fa fa-plus"></i> New</a></li>
+                   <li role="presentation" class="active"><a href="{{url('adminadvisorview')}}">View</a></li>
+                 </ul>
               </div> <!-- ======== End of column =================== -->
 
              </div>

@@ -22,8 +22,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;"> <!-- section title -->
 						<h2>Get In Touch With Us</h2>
-						<p>You can talk to our online representative at any time. Please use our Live Chat System on our website or <br>
-						Fill up below instant messaging programs.</p>
+						<p>You can contact us through message below.<br>Fill up the box below</p>
 					</div> <!-- End section title -->
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 form_holder"> <!-- form holder -->
 						<form action="includes/sendemail.php" class="contact-form">
@@ -37,15 +36,15 @@
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right address">
 						<address>
 							<div class="icon_holder float_left"><span class="icon icon-Pointer"></span></div>
-							<div class="address_holder float_left">13005 Greenville Avenue <br> California, TX 70240 <br>New York</div>
+							<div class="address_holder float_left">Pokhara-5<br> Nirmal Shanti Niwas <br>Zero Km</div>
 						</address>
 						<address class="clear_fix">
 							<div class="icon_holder float_left"><span class="icon icon-Plaine"></span></div>
-							<div class="address_holder float_left">contact@mefinance.com <br>support@mefinance.com</div>
+							<div class="address_holder float_left">contact@mefame.com <br>support@mefame.com</div>
 						</address>
 						<address class="clear_fix">
 							<div class="icon_holder float_left"><span class="icon icon-Phone2"></span></div>
-							<div class="address_holder float_left">+ (1800) 456 7890 <br> + (1544) 456 7890</div>
+							<div class="address_holder float_left">Phone:061-530819 , 520010<br>Mob:9856039322</div>
 						</address>
 					</div>
 				</div>
@@ -60,12 +59,4 @@
 		</div>
 <!-- =============== /google map ============= -->
 
-<!-- ============ free consultation ================ -->
-		<section class="container-fluid consultation">
-			<div class="container">
-				<p>If you have any querry for related investment  ... We are available</p>
-				<a href="">Contact us <i class="fa fa-arrow-circle-right"></i></a>
-			</div>
-		</section> <!-- End consultation -->
-<!-- ============ /free consultation ================ -->
 @stop

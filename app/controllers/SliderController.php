@@ -26,16 +26,17 @@ class SliderController extends BaseController {
    $slider->heading=Input::get("heading");
  	 $slider->content=Input::get("content");
  	 $slider->file=$filename;
- 	 Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+ 	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
  	 $slider->save();
 
     // Use url with redirect not the view file
-    return Redirect::to('/adminslider');
+    return Redirect::to('/adminslider')->with('success','Successfully submitted data');
   }
 
   public function showSlider(){
- 	 $slider=Slider::all();
- 	 return View::make("viewSlider")->with('slider',$slider);
+ 	 $path=base_path().'/app/storage/uploaded/';
+   $slider=Slider::orderBy('created_at','desc')->get();
+ 	 return View::make("viewSlider")->with(['slider'=>$slider,'path'=>$path]);
   }
 
   public function viewSlider($id){
@@ -57,12 +58,12 @@ class SliderController extends BaseController {
  	 $filename=Input::file("file")->getClientOriginalName();
     $heading=Input::get("heading");
  	 $content=Input::get("content");
- 	 Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+ 	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
  	 Slider::where('id', '=', $id)
              ->update(array('heading' => $heading,'content' => $content,'file' => $filename));
 
     // Use url with redirect not the view file
-   return Redirect::to('adminsliderview');
+   return Redirect::to('adminsliderview')->with('success',"Updated Successfully");
   }
 
 

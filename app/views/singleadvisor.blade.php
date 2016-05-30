@@ -5,11 +5,11 @@
 			<div class="about_banner_opacity">
 				<div class="container">
 					<div class="banner_info_about">
-						<h1>Single Advisor</h1>
+						<h1>Advisor Details</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{{url('home')}}">Home</a></li>
 							<li><i class="fa fa-angle-right"></i></li>
-							<li>Single Advisor</li>
+							<li>Advisor Details</li>
 						</ul>
 
 					</div> <!-- End Banner Info -->
@@ -61,8 +61,8 @@
 <!-- ============ free consultation ================ -->
 		<section class="container-fluid consultation">
 			<div class="container">
-				<p>If you have any querry for related investment  ... We are available</p>
-				<a href="">Contact us <i class="fa fa-arrow-circle-right"></i></a>
+				<p>If you have any querry for related information  ... We are available</p>
+				<a href="{{url('contactus')}}">Contact us <i class="fa fa-arrow-circle-right"></i></a>
 			</div>
 		</section> <!-- End consultation -->
 <!-- ============ /free consultation ================ -->

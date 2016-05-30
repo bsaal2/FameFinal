@@ -8,7 +8,7 @@
 					<div class="banner_info_about">
 						<h1>About Us</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{{url('home')}}">Home</a></li>
 							<li><i class="fa fa-angle-right"></i></li>
 							<li>About us</li>
 						</ul>
@@ -25,11 +25,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 left-side">
-						<h2>Our Histroy</h2>
+						<h2>Our History</h2>
 						<p>{{$about->history}}</p>
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-12 col-sm-12 right_side">
-						<img class="img-responsive" src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$about->file}}" alt="image">
+						<img class="img-responsive" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$about->file}}" alt="image">
 						<h3>Company Mission </h3>
 						<p>{{$about->mission}}</p>
 					</div>
@@ -52,7 +52,7 @@
 					<div class="col-md-3">
 						<div class="single-advisor">
 							<div class="img-holder">
-								<img src="assets/images/8.jpg" alt="{{$advisor->file}}"/>
+								<img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$advisor->file}}" alt="{{$advisor->file}}"/>
 								<div class="overlay">
 									<div class="inner">
 										<ul class="social">

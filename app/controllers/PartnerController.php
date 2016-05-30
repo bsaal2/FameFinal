@@ -25,11 +25,11 @@ class PartnerController extends BaseController {
   	 $filename=Input::file("file")->getClientOriginalName();
   	 $partner->content=Input::get("content");
   	 $partner->file=$filename;
-  	 Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   	 $partner->save();
 
      // Use url with redirect not the view file
-    return Redirect::to('/adminpartner');
+    return Redirect::to('/adminpartner')->with('success','Submitted Successfully');
   }
 
   public function showAllPartner(){
@@ -55,7 +55,7 @@ class PartnerController extends BaseController {
 public function editPartnerData($id){
   $filename=Input::file("file")->getClientOriginalName();
 	$content=Input::get("content");
-	Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+	Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
 	Partner::where('id', '=', $id)
 						->update(array('content' => $content,'file' => $filename));
 

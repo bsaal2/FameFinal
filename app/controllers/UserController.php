@@ -29,10 +29,10 @@ class UserController extends BaseController {
     $user->title=Input::get("title");
     $user->content=Input::get("content");
     $user->file=Input::file('file')->getClientOriginalName();
-    Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$name);
+    Input::file('file')->move(base_path().'/app/storage/uploaded',$name);
     $user->save();
 
-    return Redirect::to('admintestimonial');
+    return Redirect::to('admintestimonial')->with('success','Submitted Successfully');
   }
 
   public function editTestimonialData($id){
@@ -44,7 +44,7 @@ class UserController extends BaseController {
     $filename=User::find($id);
     $file=$filename->file;
 
-    Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$name);
+    Input::file('file')->move(base_path().'/app/storage/uploaded',$name);
     User::where('id', '=', $id)
              ->update(array('name' => $name,'position' => $position,'title' => $title,'content' => $content,'file' => $name));
     return Redirect::to("admintestimonialview");

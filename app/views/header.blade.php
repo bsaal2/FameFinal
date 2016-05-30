@@ -19,11 +19,12 @@
 					</div>
 				</div> <!-- end container -->
 			</div><!-- end top_header -->
+			
 			<div class="bottom_header top-bar-gradient" style="background: -o-linear-gradient(bottom-right, #0C0C0C, white); background: -moz-linear-gradient(bottom-right, #0C0C0C, white); background: linear-gradient(to bottom right, #0C0C0C, white);">
 				<div class="container clear_fix">
 					<div class="float_left logo">
 						<a href="{{url('home')}}">
-							<img src="{{URL::asset('assets/images/logo.png')}}" alt="Me Finance">
+							<img src="{{URL::asset('assets/images/logo1.png')}}" alt="Me Finance">
 						</a>
 					</div>
 					<div class="float_right address">
@@ -73,8 +74,10 @@
 							<li class="arrow_down"><a href="{{url('about')}}">About Us</a>
 								<div class="sub-menu">
 									<ul>
-										<li><a href="{{url('advisor')}}">Advisor</a></li>
-										<li><a href="{{url('testimonial')}}">Testimonaials</a></li>
+										<li><a href="{{url('message')}}">Message</a></li>
+										<li><a href="{{url('advisor')}}">Our Advisor</a></li>
+										<li><a href="{{url('testimonial')}}">Our Team</a></li>
+										<li><a href="{{url('department')}}">Our Departments</a></li>
 									</ul>
 								</div>
 							</li>
@@ -85,26 +88,17 @@
 									</ul>
 								</div>
 							</li>
-							<li class="arrow_down" ><a href="{{url('Projects')}}">Study Abroad</a>
-								<div class="sub-menu">
-								</div>
+							<li class="arrow_down" ><a href="{{url('studyabroad')}}">Study Abroad</a>
 							</li>
-							<li class="arrow_down" ><a href="{{url('blog')}}">Blogs</a>
+							<li class="arrow_down" ><a>News/Events</a>
 								<div class="sub-menu">
 									<ul>
-										<li><a href="{{url('blog')}}">Blog Left Bar</a></li>
-										<li><a href="{{url('blogrightbar')}}">Blog Right Bar</a></li>
-										<li><a href="{{url('blog2col')}}">Blog Two Col</a></li>
-										<li><a href="{{url('blogdetails')}}">Blog Details</a></li>
+										<li><a href="{{url('news')}}">News</a></li>
+										<li><a href="{{url('events')}}">Events</a></li>
 									</ul>
 								</div>
 							</li>
 							<li class="arrow_down" ><a href="{{url('gallery')}}">Gallery</a>
-								<div class="sub-menu">
-									<ul>
-										<li><a href="{{url('portfolio2')}}">Gallery1</a></li>
-									</ul>
-								</div>
 							</li>
 							<li><a class="contact" href="{{url('contactus')}}">Contact Us</a></li>
 						</ul>

@@ -3,7 +3,7 @@
 
 <div id="page-wrapper">
 
-            <div class="container-fluid" style="height: 1000px;">
+            <div class="container-fluid">
               <div class="col-md-8 col-lg-8">
                 <table class="table table-bordered">
                  <thead>
@@ -34,7 +34,7 @@
                       <td>{{$advisor->name}}</td>
                       <td>{{$advisor->work}}</td>
                       <td>{{$advisor->overview}}</td>
-                      <td><img class="img-thumbnail" src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$advisor->file}}" /></td>
+                      <td><img class="img-thumbnail" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$advisor->file}}" /></td>
                       <td>{{$advisor->content}}</td>
                       <td>{{$advisor->phone}}</td>
                       <td>{{$advisor->email}}</td>
@@ -44,9 +44,9 @@
                       <td>{{$advisor->linkedinlink}}</td>
                       <td>{{$advisor->created_at}}</td>
                       <td>{{$advisor->updated_at}}</td>
-                      <td><a href="{{URL::to('adminadvisorsingleview/'.$advisor->id)}}"><i class="fa fa-eye"></i></a></td>
-                      <td><a href="{{URL::to('adminadvisorsingledelete/'.$advisor->id)}}"><i class="fa fa-trash"></i></a></td>
-                      <td><a href="{{URL::to('adminadvisorsingleedit/'.$advisor->id)}}"><i class="fa fa-pencil-square"></i></a></td>
+                      <td class="text-center"><a href="{{URL::to('adminadvisorsingleview/'.$advisor->id)}}"><i class="fa fa-eye"></i></a></td>
+                      <td class="text-center"><a href="{{URL::to('adminadvisorsingledelete/'.$advisor->id)}}"><i class="fa fa-trash"></i></a></td>
+                      <td class="text-center"><a href="{{URL::to('adminadvisorsingleedit/'.$advisor->id)}}"><i class="fa fa-pencil-square"></i></a></td>
                     </tr>
                     @empty
                       <h2 class="text-primary">Empty Data</h2>

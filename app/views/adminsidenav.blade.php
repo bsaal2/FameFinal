@@ -121,7 +121,7 @@
                               <a href="{{url('/adminslider')}}">Slider</a>
                           </li>
                           <li>
-                              <a href="{{url('/admintestimonial')}}">Testimonials</a>
+                              <a href="{{url('/admintestimonial')}}">Our Team</a>
                           </li>
                           <li>
                               <a href="{{url('/adminpartner')}}">Our Parners</a>
@@ -132,10 +132,16 @@
                       <a href="javascript:;" data-toggle="collapse" data-target="#about"><i class="fa fa-info-circle" aria-hidden="true"></i> About<i class="fa fa-fw fa-caret-down"></i></a>
                       <ul id="about" class="collapse">
                           <li>
+                              <a href="{{url('/adminmessage')}}">Message</a>
+                          </li>
+                          <li>
                               <a href="{{url('/adminaboutus')}}">About us</a>
                           </li>
                           <li>
                               <a href="{{url('/adminadvisor')}}">Advisor</a>
+                          </li>
+                          <li>
+                              <a href="{{url('/admindepartment')}}">Our Departments</a>
                           </li>
                       </ul>
                     </li>
@@ -143,24 +149,32 @@
                         <a href="{{url('adminservice')}}"><i class="fa fa-fw fa-bar-chart-o"></i> Services</a>
                     </li>
                     <li>
-                        <a href="{{url('adminstudyabroad')}}"><i class="fa fa-fw fa-edit"></i> studyAbroad</a>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#studyabroad"><i class="fa fa-fw fa-edit" aria-hidden="true"></i>Study Abroad<i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="studyabroad" class="collapse">
+                          <li>
+                              <a href="{{url('/adminstudyabroad')}}">Country</a>
+                          </li>
+                          <li>
+                              <a href="{{url('/admintest')}}">Test Preparation</a>
+                          </li>
+                      </ul>
                     </li>
                     <li>
-                        <a href="{{url('adminblogs')}}"><i class="fa fa-fw fa-desktop"></i> Blogs</a>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News & Events<i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="news" class="collapse">
+                          <li>
+                              <a href="{{url('/adminnew')}}">News</a>
+                          </li>
+                          <li>
+                              <a href="{{url('/admininfo')}}">Events</a>
+                          </li>
+                      </ul>
                     </li>
                     <li>
-                        <a href="{{url('admingallery')}}"><i class="fa fa-fw fa-archive"></i> Gallery</a>
+                        <a href="{{url('admingallary')}}"><i class="fa fa-camera-retro"></i> Album</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
+                        <a href="{{url('adminimage')}}"><i class="fa fa-picture-o"></i> Image</a>
                     </li>
                 </ul>
             </div>

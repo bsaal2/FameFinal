@@ -9,7 +9,7 @@
 					<div class="banner_info_about">
 						<h1>Services</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{{url('home')}}">Home</a></li>
 							<li><i class="fa fa-angle-right"></i></li>
 							<li>Services</li>
 						</ul>
@@ -26,7 +26,7 @@
 
 					@foreach($service as $service)
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-						<img class="img-responsive" src="{{'http://localhost/ProjectFame/fame/app/uploaded/'.$service->file}}" alt="{{$service->file}}">
+						<img class="img-responsive" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$service->file}}" alt="{{$service->file}}">
 						<a href=""><h3>{{$service->heading}}</h3></a>
 						<p>{{$service->content}}</p>
 					</div>

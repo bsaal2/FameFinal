@@ -32,11 +32,11 @@ public function handleAdvisor(){
 	$advisor->twitterlink=Input::get("twitter");
 	$advisor->googlepluslink=Input::get("googleplus");
 	$advisor->linkedinlink=Input::get("linkedin");
-  Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   $advisor->save();
 
   // Use url with redirect not the view file
-  return Redirect::to('/adminadvisor');
+  return Redirect::to('/adminadvisor')->with('success',"Successfully Submitted");
 }
 
 public function showAllAdvisor(){
@@ -71,7 +71,7 @@ public function editAdvisorData($id){
 	$twitterlink=Input::get("twitter");
 	$googlepluslink=Input::get("googleplus");
 	$linkedinlink=Input::get("linkedin");
-  Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   Advisor::where('id', '=', $id)
             ->update(array('name' => $name,'work' => $work,'content' => $content,'overview' => $overview,'phone'=>$phone,'email'=>$email,'facebooklink' => $facebooklink,
 						'twitterlink' => $twitterlink,'googlepluslink' => $googlepluslink,'linkedinlink' => $linkedinlink,'file' => $filename));

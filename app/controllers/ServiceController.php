@@ -26,11 +26,11 @@ class ServiceController extends BaseController {
      $service->heading=Input::get("heading");
      $service->content=Input::get("content");
   	 $service->file=$filename;
-  	 Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  	 Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   	 $service->save();
 
      // Use url with redirect not the view file
-    return Redirect::to('/adminservice');
+    return Redirect::to('/adminservice')->with('success','Submitted Successfully');
   }
 
   public function showAllService(){
@@ -57,7 +57,7 @@ public function editServiceData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $heading=Input::get("heading");
   $content=Input::get("content");
-	Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+	Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
 	Service::where('id', '=', $id)
 						->update(array('heading'=>$heading,'content' => $content,'file' => $filename));
 

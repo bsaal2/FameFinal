@@ -24,11 +24,11 @@ public function handleAbout(){
   $about->history=Input::get("history");
   $about->mission=Input::get("mission");
   $about->file=$filename;
-  Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   $about->save();
 
   // Use url with redirect not the view file
-  return Redirect::to('/adminaboutus');
+  return Redirect::to('/adminaboutus')->with('success','Submitted Successfully');
 }
 
 public function showAllAbout(){
@@ -55,7 +55,7 @@ public function editAboutData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $history=Input::get("history");
   $mission=Input::get("mission");
-  Input::file('file')->move('/opt/lampp/htdocs/ProjectFame/fame/app/uploaded',$filename);
+  Input::file('file')->move(base_path().'/app/storage/uploaded',$filename);
   About::where('id', '=', $id)
             ->update(array('history' => $history,'mission' => $mission,'file' => $filename));
 

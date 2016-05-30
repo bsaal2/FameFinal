@@ -8,7 +8,7 @@
 					<div class="banner_info_about">
 						<h1>Services Single</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{{url('home')}}">Home</a></li>
 							<li><i class="fa fa-angle-right"></i></li>
 							<li>Services Single</li>
 						</ul>
@@ -25,7 +25,8 @@
 						<div class="tab_details">
 						    <!-- Tab panes -->
 						    <div class="tab-content right_info">
-						      <div class="tab-pane fade row" id="financial">
+
+									<div class="tab-pane fade row" id="financial">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="assets/images/service/10.jpg" alt="image">
 						      	<h2>Financial planning</h2>
@@ -39,6 +40,7 @@
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
+
 						      <div class="tab-pane fade row" id="retairing">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
@@ -46,6 +48,7 @@
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
+
 						      <div class="tab-pane fade row" id="texes">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
@@ -53,13 +56,15 @@
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
-						      <div class="tab-pane fade row" id="stocks">
+
+									<div class="tab-pane fade row" id="stocks">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
 						      	<h2>Stocks market Training</h2>
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
+
 						      <div class="tab-pane fade row" id="mutual">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
@@ -67,6 +72,7 @@
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
+
 						      <div class="tab-pane fade row" id="company">
 						      	<img class="img-responsive" src="assets/images/service/9.jpg" alt="image">
 						      	<img class="img-responsive hidden-sm hidden-xs" src="images/service/10.jpg" alt="image">
@@ -74,6 +80,7 @@
 						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>
 								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						      </div>
+
 						    </div>
 						</div> <!-- End tab_details -->
 
@@ -81,15 +88,13 @@
 					</div> <!-- End white_bg -->
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left left_side_bar"> <!-- required for floating -->
 					  <!-- Nav tabs -->
-					  <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
-					    <li class="active"><a href="#financial" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Financial planning</a></li>
-					    <li><a href="#investment" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Investment in bonds</a></li>
-					    <li><a href="#retairing" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Retairing planning</a></li>
-					    <li><a href="#texes" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Texes Advisory</a></li>
-					    <li><a href="#stocks" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Stocks market Training</a></li>
-					    <li><a href="#mutual" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Mutual funds</a></li>
-					    <li><a href="#company" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Company growth analysis</a></li>
-					  </ul>
+
+						<ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
+              @foreach($heading as $heading)
+							<li><a href="#{{str_limit($heading->heading,$limit=5)}}" data-toggle="tab"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{$heading->heading}}</a></li>
+              @endforeach
+						</ul>
+
 					  <div class="advisor_side"> <!-- Advisor profile & Download option -->
 						<h3>Meet Our Advisior</h3>
 						<a class="advisor_info" href="">
