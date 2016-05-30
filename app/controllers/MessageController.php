@@ -25,7 +25,7 @@ public function handleMessage(){
   $msg->heading=Input::get("heading");
   $msg->content=Input::get("content");
 	$msg->file=$filename;
-  Image::make(Input::file('file'))->resize(60, 60)->save(base_path().'/app/storage/uploaded/'.$filename);
+  Image::make(Input::file('file'))->resize(1000, 300)->save(base_path().'/app/storage/uploaded/'.$filename);
   $msg->save();
 
   // Use url with redirect not the view file
@@ -56,7 +56,7 @@ public function editMessageData($id){
   $filename=Input::file("file")->getClientOriginalName();
   $heading=Input::get("heading");
   $content=Input::get("content");
-  Image::make(Input::file('file'))->resize(60, 60)->save(base_path().'/app/storage/uploaded/'.$filename);
+  Image::make(Input::file('file'))->resize(1000, 300)->save(base_path().'/app/storage/uploaded/'.$filename);
   Message::where('id', '=', $id)
             ->update(array('heading' => $heading,'content'=>$content,'file' => $filename));
 

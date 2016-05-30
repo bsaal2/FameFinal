@@ -42,7 +42,7 @@
 								      	<div class="panel-body">
 									      	<h3>{{$country->title}}</h3>
 									      	<p>{{$country->content1}}</p>
-									      	<p><img src="assets/images/16.jpg" alt="{{$country->file}}">{{$country->content2}}</p>
+									      	<p><img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$country->file}}" alt="{{$country->file}}">{{$country->content2}}</p>
 								    	</div>
 								    </div>
 								</div>
@@ -69,7 +69,7 @@
 								      <div class="panel-body">
 								      	<h3>{{$test->title}}</h3>
 								      	<p>{{$test->content1}}</p>
-								      	<p><img src="assets/images/16.jpg" alt="{{$test->file}}">{{$test->content2}}</p>
+								      	<p><img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$test->file}}" alt="{{$test->file}}">{{$test->content2}}</p>
 								      </div>
 								  </div>
 								</div>

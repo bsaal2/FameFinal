@@ -21,7 +21,8 @@
 		<section class="latest_work latest_work_two">
 			<div class="container latest_work_title">
 				@foreach($msg as $msg)
-				<h2><img class="img-circle" alt="{{$msg->file}}" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$msg->file}}" /> {{$msg->heading}}</h2>
+				<img class="img-thumbnail" alt="{{$msg->file}}" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$msg->file}}" />
+				<h2>{{$msg->heading}}</h2>
 				<p>{{$msg->content}}</p>
 		   @endforeach
 			</div>

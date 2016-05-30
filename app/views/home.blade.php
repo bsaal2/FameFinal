@@ -291,7 +291,7 @@
 
 						<ul>
                       @foreach($partnerImage as $partnerImage)
-							<li><a href=""><img src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$partnerImage->file}}" alt="{{$partnerImage->file}}"></a></li>
+							<li><a href=""><img class="partner-image" src="{{'http://localhost/ProjectFame1/fame/app/storage/uploaded/'.$partnerImage->file}}" alt="{{$partnerImage->file}}"></a></li>
                       @endforeach
 						</ul>
 					</div> <!-- End our_partner -->
